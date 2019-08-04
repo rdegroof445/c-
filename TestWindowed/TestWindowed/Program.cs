@@ -121,53 +121,7 @@ namespace TestWindowed
 
             Debug.WriteLine("Starting Finished Rotating!");
 
-            //System.Drawing.Image loadedImage = System.Drawing.Image.FromFile("C:/Users/rdegr/Pictures/Camera Roll/WIN_20190616_15_33_06_Pro.jpg");
-
-            Bitmap testBitmap = (Bitmap)(Bitmap.FromFile("D:/vs_code_projects/c#_project/TestWindowed/TestWindowed/test_symmetric_3.bmp"));
-
-            /*
-
-            FileStream inputFileStream = new FileStream("D:/vs_code_projects/c#_project/TestWindowed/TestWindowed/test_symmetric_2.bmp", FileMode.Open);
-
-            BitmapDecoder bitmapDecoder = new BmpBitmapDecoder(inputFileStream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
-
-            BitmapSource bitmapSource = bitmapDecoder.Frames[0];
-
-            //bitmapSource.
-
-            int imageWidth = (int)bitmapSource.Width;
-
-            int imageHeight = (int)bitmapSource.Height;
-
-            //Bitmap convertedWriteable = (Bitmap)writeableBitmap;
-
-            int bitsPerPixel = bitmapSource.Format.BitsPerPixel;
-
-            //int numberOfActiveBytes = imageWidth * imageHeight;
-
-            int numberOfActiveBytes = imageWidth * imageHeight * (bitsPerPixel / 8);
-
-            //int numberOfActiveBytes = imageWidth * imageHeight * bitsPerPixel;
-
-            Int32[] imageBits = new Int32[numberOfActiveBytes];
-
-            int rawStride = (width * bitsPerPixel + 7) / 8;
-
-            Debug.WriteLine("Image Bytes Count: " + imageBits.Count() + " Bits Per Pixel: " + bitsPerPixel + " bytes Per Pixel: " + (bitsPerPixel / 8));
-
-            //Array pixels = Array.CreateInstance(typeof(bool),numberOfActiveBytes);
-
-            bitmapSource.CopyPixels(imageBits, rawStride, 0);
-
-            //byte[] imageBytes = pixels.
-
-            // Graphics canvasGraphics = Graphics.FromImage(w);
-
-            // canvasGraphics.DrawImage(loadedImage, new System.Drawing.Point(25, 25));
-
-            //byte[] imageBytes = ConvertBoolArrayToByteArray(imageBits);
-
-            */
+            Bitmap testBitmap = (Bitmap)(Bitmap.FromFile("../../test_symmetric_3.bmp"));
 
             TranslateBitmap(testBitmap);
 
@@ -183,19 +137,7 @@ namespace TestWindowed
             testArray[1] = test2;
             testArray[2] = test3;
 
-            //PrintIntArrayBinary(testArray);
-
             Debug.WriteLine("Printing Derived Array");
-
-            //PrintIntArrayBinary(imageBits);
-
-            // i.Source = bitmapSource;
-
-            //testBitmap.GetPixel(0, 0);
-            
-            //BitmapSource testBitmapSource = bitmapDecoder.Frames[0];
-
-            //i.Source = testBitmapSource;
 
         }
 
@@ -231,8 +173,7 @@ namespace TestWindowed
                             // Assign the color data to the pixel.
                             *((int*)pBackBuffer) = color_data;
                         }
-                        // Debug.WriteLine("X and Y values are: " + ((dataCounter / 3) % width) + " : " + ((dataCounter / 3) / width));
-
+                        
                         // Specify the area of the bitmap that changed.
                         writeableBitmap.AddDirtyRect(new Int32Rect(xCounter, yCounter, 1, 1));
 
@@ -319,92 +260,6 @@ namespace TestWindowed
 
         }
 
-        /*
-        private void loadItem(object sender, EventArgs e)
-        {
-
-            Debug.WriteLine("Load Item Context Menu Clicked!");
-
-            Debug.WriteLine("Starting Finished Rotating!");
-
-            System.Drawing.Image loadedImage = System.Drawing.Image.FromFile("C:/Users/rdegr/Pictures/Camera Roll/WIN_20190616_15_33_06_Pro.jpg");
-
-            byte[] imageBytes = System.IO.File.ReadAllBytes("D:/vs_code_projects/c#_project/TestWindowed/TestWindowed/test_symmetric_2.bmp");
-
-            byte[] rotateImageBytes = new byte[imageBytes.Count()];
-
-
-            for (int zeroCounter = 0, maxCounter = rotateImageBytes.Count() - 1; zeroCounter < imageBytes.Count(); zeroCounter++, maxCounter--)
-            {
-
-                rotateImageBytes[maxCounter] = imageBytes[zeroCounter];
-
-            }
-
-            PixelFormat pf = PixelFormats.Rgb24;
-
-            int width = 480;
-
-            int height = 480;
-
-            int rawStride = (width * pf.BitsPerPixel) / 8;
-
-            //int rawStride = width / 8;
-
-            // int rawStride = (width * pf.BitsPerPixel + 7) / 8;
-
-            // byte[] rawImage = new byte[rawStride * height];
-
-            byte[] rawImage = rotateImageBytes;
-
-            // Initialize the image with data.
-            //Random value = new Random();
-            //value.NextBytes(rawImage);
-
-            // Create a BitmapSource.
-
-            // begin block comment !@#$
-
-            //BitmapSource bitmap = BitmapSource.Create(width, height,
-            //    96, 96, pf, null,
-            //    rawImage, rawStride);
-
-            // end block comment !@#$
-            
-
-            // Create an image element;
-            //Image myImage = new Image();
-            //myImage.Width = 200;
-            // Set image source.
-            //myImage.Source = bitmap;
-
-            //instance.i = new Image();
-
-            //instance.i.Loaded += new RoutedEventHandler(rotateImage);
-
-            // begin block comment !@#$
-
-            ((Image)instance.i).Source = bitmap;
-
-            // end block comment !@#$
-
-            DrawImagePixels(rawImage, width, height);
-
-            //Thread rotateThread = new Thread(rotateImage);
-
-            //rotateThread.Start();
-
-            //RotateTransform rotate = new RotateTransform();
-
-            //rotate.Angle = 180;
-
-            //((Image)instance.i).LayoutTransform = rotate;
-
-            Debug.WriteLine("Finished Rotating Thread1!");
-
-        }
-        */
-
         private void rotateImage(object sender, EventArgs e)
         {
 
@@ -417,8 +272,6 @@ namespace TestWindowed
             angle += 45;
 
             System.Windows.Media.Matrix m = instance.i.RenderTransform.Value;
-
-            //m.
 
                 m.ScaleAt(
                     1.0 / 1.5,
@@ -434,7 +287,6 @@ namespace TestWindowed
 
         private static void W_ContentRendered(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
 
             ClearCanvas();
 
@@ -442,9 +294,7 @@ namespace TestWindowed
 
         static void ClearCanvas()
         {
-            //int column = (int)e.GetPosition(i).X;
-            //int row = (int)e.GetPosition(i).Y;
-
+            
             for(int column = 0; column < writeableBitmap.Width; column++)
             {
 
@@ -517,8 +367,7 @@ namespace TestWindowed
                         // Assign the color data to the pixel.
                         *((int*)pBackBuffer) = color_data;
                     }
-                    // Debug.WriteLine("X and Y values are: " + ((dataCounter / 3) % width) + " : " + ((dataCounter / 3) / width));
-
+                    
                     // Specify the area of the bitmap that changed.
                     writeableBitmap.AddDirtyRect(new Int32Rect(((dataCounter / 3) % width), ((dataCounter / 3) / width), 1, 1));
                 }
@@ -533,50 +382,6 @@ namespace TestWindowed
 
             
         }
-
-        /*
-        static void DrawImagePixels(byte[] data, int totalBytes, int width, int height)
-        {
-
-            try
-            {
-                // Reserve the back buffer for updates.
-                writeableBitmap.Lock();
-                for (int dataCounter = 0; dataCounter < totalBytes; dataCounter += 3)
-                {
-
-                    unsafe
-                    {
-
-                        // Get a pointer to the back buffer.
-                        int pBackBuffer = (int)writeableBitmap.BackBuffer;
-
-                        // Find the address of the pixel to draw.
-                        pBackBuffer += ((dataCounter / 3) / width) * writeableBitmap.BackBufferStride;
-                        pBackBuffer += ((dataCounter / 3) % width) * 3;
-
-                        // Compute the pixel's color.
-                        int color_data = ((int)data[dataCounter] << 16); // R
-                        color_data |= ((int)data[dataCounter + 1] << 8);   // G
-                        color_data |= ((int)data[dataCounter + 2] << 0);   // B
-
-                        // Assign the color data to the pixel.
-                        *((int*)pBackBuffer) = color_data;
-                    }
-                    // Debug.WriteLine("X and Y values are: " + ((dataCounter / 3) % width) + " : " + ((dataCounter / 3) / width));
-
-                    // Specify the area of the bitmap that changed.
-                    writeableBitmap.AddDirtyRect(new Int32Rect(((dataCounter / 3) % width), ((dataCounter / 3) / width), 1, 1));
-                }
-            }
-            finally
-            {
-                // Release the back buffer and make it available for display.
-                writeableBitmap.Unlock();
-            }
-
-        }
-        */
 
         static void DrawPixel(MouseEventArgs e)
         {
@@ -659,9 +464,6 @@ namespace TestWindowed
 
             System.Windows.Media.Matrix m = instance.i.RenderTransform.Value;
 
-            //m.
-
-            
             if (buttonE == null)
             {
 
@@ -677,12 +479,7 @@ namespace TestWindowed
                 -(e.GetPosition(w).Y - (instance.height / 2)));
                 
 
-                /*
-                m.Transform(new Point(e.GetPosition(instance.i).X,
-                e.GetPosition(instance.i).Y));
-                */
-
-    }
+            }
             else
             {
 
@@ -697,15 +494,6 @@ namespace TestWindowed
                 -(buttonE.GetPosition(w).X - (instance.width / 2)),
                 -(buttonE.GetPosition(w).Y - (instance.height / 2)));
 
-                //buttonE.GetPosition(w).X,
-                //buttonE.GetPosition(w).Y);
-
-
-                /*
-                m.Transform(new Point(buttonE.GetPosition(instance.i).X,
-                buttonE.GetPosition(instance.i).Y));
-                */
-
             }
 
             instance.i.RenderTransform = new MatrixTransform(m);
@@ -719,12 +507,8 @@ namespace TestWindowed
         static void i_KeyDown(object sender, KeyEventArgs e)
         {
 
-            //Debug.WriteLine("Key Down: " + e.Key);
-
             if (e.Key == Key.W)
             {
-
-                //Debug.WriteLine("W Key is Down!");
 
                 wDown = true;
 
@@ -735,12 +519,8 @@ namespace TestWindowed
         static void i_KeyUp(object sender, KeyEventArgs e)
         {
 
-            //Debug.WriteLine("Key Up: " + e.Key);
-
             if (e.Key == Key.W)
             {
-
-                //Debug.WriteLine("W Key is Up!");
 
                 wDown = false;
 
@@ -774,8 +554,6 @@ namespace TestWindowed
         static void w_MouseWheel(object sender, MouseWheelEventArgs e)
         {
             System.Windows.Media.Matrix m = instance.i.RenderTransform.Value;
-
-            //m.
 
             if (e.Delta > 0)
             {
