@@ -367,8 +367,6 @@ namespace BFSGraphical
 
                 rootNode.addChild(lvl2chl2);
 
-                //rootNode.addChild(lvl2chl2);
-
                 Node lvl2chl3 = new Node("Level 2 Child 3");
 
                 rootNode.addChild(lvl2chl3);
@@ -452,8 +450,6 @@ namespace BFSGraphical
             queue.Add(tree.GetTreeA());
 
             int currentLevelCount = 1;
-
-            // int displayCurrentLevelCount = currentLevelCount;
 
             int nextLevelCount = 0;
 
@@ -557,8 +553,6 @@ namespace BFSGraphical
                         currentLevelCount = nextLevelCount;
 
                         nextLevelCount = 0;
-
-                        //displayCurrentLevelCount = currentLevelCount;
 
                         childDisplayNodes.Clear();
 

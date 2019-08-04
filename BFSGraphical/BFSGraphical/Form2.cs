@@ -35,19 +35,6 @@ namespace BFSGraphical
 
         }
 
-        /*
-        protected override void OnLoad(EventArgs e)
-        {
-
-            base.OnLoad(e);
-
-            instance.runThread();
-
-            Console.WriteLine("My Form Has Been Loaded!!!!");
-
-        }
-        */
-
         BFS.DisplayTree displayTree = null;
 
         protected override void OnShown(EventArgs e)
@@ -73,8 +60,6 @@ namespace BFSGraphical
             base.OnPaint(e);
 
             instance.runThread(displayTree);
-
-            // Console.WriteLine("Width: " + this.Width + " Height: " + this.Height);
 
         }
 
@@ -112,8 +97,6 @@ namespace BFSGraphical
                 instance.runThread(displayTree);
 
             }
-
-            // Console.WriteLine("Width: " + this.Width + " Height: " + this.Height);
 
         }
 

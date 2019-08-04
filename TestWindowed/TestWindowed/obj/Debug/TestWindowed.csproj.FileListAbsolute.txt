@@ -5,3 +5,10 @@ D:\vs_code_projects\c#_project\TestWindowed\TestWindowed\obj\Debug\TestWindowed.
 D:\vs_code_projects\c#_project\TestWindowed\TestWindowed\obj\Debug\TestWindowed.csproj.CoreCompileInputs.cache
 D:\vs_code_projects\c#_project\TestWindowed\TestWindowed\obj\Debug\TestWindowed.exe
 D:\vs_code_projects\c#_project\TestWindowed\TestWindowed\obj\Debug\TestWindowed.pdb
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed\TestWindowed\bin\Debug\TestWindowed.exe.config
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed\TestWindowed\bin\Debug\TestWindowed.exe
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed\TestWindowed\bin\Debug\TestWindowed.pdb
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed\TestWindowed\obj\Debug\TestWindowed.csprojAssemblyReference.cache
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed\TestWindowed\obj\Debug\TestWindowed.csproj.CoreCompileInputs.cache
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed\TestWindowed\obj\Debug\TestWindowed.exe
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed\TestWindowed\obj\Debug\TestWindowed.pdb

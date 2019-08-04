@@ -8,3 +8,13 @@ D:\vs_code_projects\c#_project\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.
 D:\vs_code_projects\c#_project\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.exe
 D:\vs_code_projects\c#_project\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.pdb
 D:\vs_code_projects\c#_project\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.Form1.resources
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\bin\Debug\BFSGraphical.exe.config
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\bin\Debug\BFSGraphical.exe
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\bin\Debug\BFSGraphical.pdb
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.csprojAssemblyReference.cache
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.Form1.resources
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.Properties.Resources.resources
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.csproj.GenerateResource.cache
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.csproj.CoreCompileInputs.cache
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.exe
+D:\vs_code_projects\c#_project\c_sharp\BFSGraphical\BFSGraphical\obj\Debug\BFSGraphical.pdb

@@ -20,23 +20,13 @@ namespace BFSGraphical
 
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Form2 form1 = new Form2();
-
             Console.WriteLine("Before Run Application");
 
             Thread testThread = new Thread(TestThreadStart.runApplication);
 
-            //testThread.Start();
-
-             Application.Run(Form2.getInstance());
+            Application.Run(Form2.getInstance());
 
             Console.WriteLine("Past Run Application");
-
-            //Form2.getInstance().runThread();
-
-            // BFS bfs = new BFS(500, 500, 20);
-
-            // bfs.runSearch1();
 
         }
 
@@ -65,21 +55,8 @@ namespace BFSGraphical
 
         public void runThread()
         {
-            /*
-            ThreadStart threadStart = new ThreadStart(TestThreadStart.testMethod);
+            
 
-            MethodData methodData = new MethodData();
-
-            methodData.panel1 = this.panel1;
-
-            Graphics graphics = this.panel1.CreateGraphics();
-
-            methodData.graphics = graphics;
-
-            Thread testThread = new Thread(TestThreadStart.setColor);
-
-            testThread.Start(methodData);
-            */
 
         }
 
