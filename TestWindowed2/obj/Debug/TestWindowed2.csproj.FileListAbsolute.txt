@@ -1,0 +1,9 @@
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\bin\Debug\TestWindowed2.exe.config
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\bin\Debug\TestWindowed2.exe
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\bin\Debug\TestWindowed2.pdb
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\obj\Debug\TestWindowed2.Form1.resources
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\obj\Debug\TestWindowed2.csproj.GenerateResource.cache
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\obj\Debug\TestWindowed2.csproj.CoreCompileInputs.cache
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\obj\Debug\TestWindowed2.exe
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\obj\Debug\TestWindowed2.pdb
+D:\vs_code_projects\c#_project\c_sharp\TestWindowed2\obj\Debug\TestWindowed2.csprojAssemblyReference.cache

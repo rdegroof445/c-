@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Drawing;
 using System.IO;
+using TestWindowed2;
 
 namespace TestWindowed
 {
@@ -21,9 +22,12 @@ namespace TestWindowed
         static Window w;
         System.Windows.Controls.Image i;
         static WriteableBitmap writeableBitmap;
+
         static MenuItem loadImage;
 
         static MenuItem rotImage;
+
+        static MenuItem help;
 
         static Program instance;
 
@@ -32,6 +36,9 @@ namespace TestWindowed
         int width = 1400;
 
         int height = 800;
+
+        static Form1 form1;
+
 
         public Program()
         {
@@ -49,6 +56,15 @@ namespace TestWindowed
 
             w.Show();
 
+            if( form1 == null )
+            {
+
+                form1 = new Form1();
+
+            }
+
+            form1.Show();
+
             System.Windows.Controls.ContextMenu programMenu = new ContextMenu();
 
             loadImage = new MenuItem();
@@ -63,9 +79,17 @@ namespace TestWindowed
 
             rotImage.Click += new RoutedEventHandler(this.rotateImage);
 
+            help = new MenuItem();
+
+            help.Header = "Help";
+
+            help.Click += new RoutedEventHandler(this.loadHelp);
+
             programMenu.Items.Add(loadImage);
 
             programMenu.Items.Add(rotImage);
+
+            programMenu.Items.Add(help);
 
             w.ContextMenu = programMenu;
 
@@ -91,7 +115,7 @@ namespace TestWindowed
             i.MouseLeftButtonDown +=
                 new MouseButtonEventHandler(i_MouseLeftButtonDown);
             i.MouseRightButtonDown +=
-                new MouseButtonEventHandler(i_MouseRightButtonDown);
+                new MouseButtonEventHandler(i_MouseRightButtonDownNull);
 
             w.KeyDown += new KeyEventHandler(i_KeyDown);
 
@@ -112,6 +136,15 @@ namespace TestWindowed
 
             Program program = new Program();
                         
+        }
+
+        private void loadHelp(object sender, EventArgs e)
+        {
+
+            form1 = new Form1();
+
+            form1.Show();
+
         }
 
         private void loadItem(object sender, EventArgs e)
@@ -423,7 +456,7 @@ namespace TestWindowed
 
         static void ErasePixel(MouseEventArgs e)
         {
-            byte[] ColorData = { 0, 0, 0, 0 }; // B G R
+            byte[] ColorData = { 255, 255, 255, 1 }; // B G R
 
             Int32Rect rect = new Int32Rect(
                     (int)(e.GetPosition(instance.i).X),
@@ -432,6 +465,10 @@ namespace TestWindowed
                     1);
 
             writeableBitmap.WritePixels(rect, ColorData, 4, 0);
+        }
+        static void i_MouseRightButtonDownNull(object sender, MouseButtonEventArgs e)
+        {
+            
         }
 
         static void i_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -547,7 +584,7 @@ namespace TestWindowed
             }
             else if (e.RightButton == MouseButtonState.Pressed)
             {
-                ErasePixel(e);
+                // ErasePixel(e);
             }
         }
 
